@@ -1,8 +1,7 @@
 package sort;
 
-import org.junit.Test;
 
-import java.io.BufferedReader;
+import org.junit.Test;
 
 //数组中的第K个最大元素
 public class Solution215 {
