@@ -10,17 +10,19 @@ public class LongestAscendingSubsequence {
         for (int i = 0; i < n; i++) {
             nums[i] = sc.nextInt();
         }
-        int[] dp = new int[n];
-        int max = 0;
+        int[] q = new int[n + 1];
+        q[0] = Integer.MIN_VALUE;
+        int len = 0;
         for (int i = 0; i < n; i++) {
-            dp[i] = 1;
-            for (int j = 0; j < i; j++) {
-                if (nums[i] > nums[j])
-                    dp[i] = Math.max(dp[i], dp[j] + 1);
-
+            int l = 0, r = len;
+            while (l < r) {
+                int mid = l + r + 1 >> 1;
+                if (q[mid] < nums[i]) l = mid;
+                else r = mid - 1;
             }
-            max = Math.max(max, dp[i]);
+            q[r + 1] = nums[i];
+            len = Math.max(len, r + 1);
         }
-        System.out.println(max);
+        System.out.println(len);
     }
 }
