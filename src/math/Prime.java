@@ -44,7 +44,7 @@ public class Prime {
     }
 
     //线性筛法O(n)
-    //每一个合数都是有其最小质因数筛选掉的
+    //每一个合数都是由其最小质因数筛选掉的
     public List<Integer> getPrimes2(int n) {
         List<Integer> primes = new ArrayList<>();
         boolean[] st = new boolean[n + 1];
