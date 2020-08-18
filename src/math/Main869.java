@@ -10,12 +10,12 @@ public class Main869 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
-            List<Integer> divisors = new ArrayList<>();
             int a = sc.nextInt();
+            List<Integer> divisors = new ArrayList<>();
             for (int j = 1; j <= a / j; j++) {
-                if (a % j == 0) {
+                if(a % j == 0) {
                     divisors.add(j);
-                    if (j != a / j) divisors.add(a / j);
+                    if(j != a/j) divisors.add(a / j);
                 }
             }
             divisors.sort(Comparator.comparingInt(o -> o));

@@ -13,11 +13,11 @@ public class Main875 {
         }
     }
 
-    private static long quickMi(long a, long b, long p) {
+    private static long quickMi(long a, long k, long p) {
         long res = 1;
-        while (b != 0) {
-            if ((b & 1) == 1) res = res * a % p;
-            b >>= 1;
+        while (k > 0) {
+            if ((k & 1) == 1) res = res * a % p;
+            k >>= 1;
             a = a * a % p;
         }
         return res;

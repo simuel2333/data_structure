@@ -10,15 +10,15 @@ public class Main867 {
             int a = sc.nextInt();
             for (int j = 2; j <= a / j; j++) {
                 if (a % j == 0) {
-                    int count = 0;
+                    int cnt = 0;
                     while (a % j == 0) {
-                        count++;
+                        cnt++;
                         a /= j;
                     }
-                    System.out.println(j + " " + count);
+                    System.out.println(j + " " + cnt);
                 }
             }
-            if (a > 1) System.out.println(a + " " + 1);
+            if(a > 1) System.out.println(a + " " + 1);
             System.out.println();
         }
     }

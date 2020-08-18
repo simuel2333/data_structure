@@ -7,13 +7,13 @@ public class Main866 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
-            long a = sc.nextLong();
-            if (a == 1) {
+            int a = sc.nextInt();
+            if (a < 2) {
                 System.out.println("No");
                 continue;
             }
             boolean flag = true;
-            for (long j = 2; j <= a / j; j++) {
+            for (int j = 2; j <= a / j; j++) {
                 if (a % j == 0) {
                     System.out.println("No");
                     flag = false;
